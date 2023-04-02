@@ -14,8 +14,8 @@ namespace ApiServer.Model
 
         [EmailAddress]
         public string Email { get; set; } = string.Empty;
-
-        public string Mobile { get; set; } = string.Empty;
+        
+        public string? Mobile { get; set; } = string.Empty;
 
         public string Name { get; set; } = string.Empty;
 
@@ -30,6 +30,11 @@ namespace ApiServer.Model
         public bool? isConfirmed { get; set; } = false;
         public string? ConfirmationCode { get; set; }
 
-        public RoleLevels UserRole { get; set; }
+        public RoleLevels UserRole { get; set; } = RoleLevels.Reader;
+
+
+        public ICollection<BlogPost> BlogPosts { get; set; }
+        public ICollection<BlogPostComment> BlogPostsComments { get; set;}
+        public ICollection<BlogPostLike> BlogPostLikes { get; set; }
     }
 }
