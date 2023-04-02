@@ -1,0 +1,113 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "ApiServer.Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "ApiServer.Shared": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ApiServer.Model.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ApiServer.Model.dll": {}
+        }
+      },
+      "ApiServer.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/ApiServer.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ApiServer.Shared.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ApiServer.Model/1.0.0": {
+      "type": "project",
+      "path": "../ApiServer.Model/ApiServer.Model.csproj",
+      "msbuildProject": "../ApiServer.Model/ApiServer.Model.csproj"
+    },
+    "ApiServer.Shared/1.0.0": {
+      "type": "project",
+      "path": "../ApiServer.SharedKernel/ApiServer.Shared.csproj",
+      "msbuildProject": "../ApiServer.SharedKernel/ApiServer.Shared.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "ApiServer.Model >= 1.0.0",
+      "ApiServer.Shared >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Travis\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Projects\\WebApiTemplate\\ApiServer\\ApiServer.Data\\ApiServer.Data.csproj",
+      "projectName": "ApiServer.Data",
+      "projectPath": "C:\\Projects\\WebApiTemplate\\ApiServer\\ApiServer.Data\\ApiServer.Data.csproj",
+      "packagesPath": "C:\\Users\\Travis\\.nuget\\packages\\",
+      "outputPath": "C:\\Projects\\WebApiTemplate\\ApiServer\\ApiServer.Data\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Travis\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {
+            "C:\\Projects\\WebApiTemplate\\ApiServer\\ApiServer.Model\\ApiServer.Model.csproj": {
+              "projectPath": "C:\\Projects\\WebApiTemplate\\ApiServer\\ApiServer.Model\\ApiServer.Model.csproj"
+            },
+            "C:\\Projects\\WebApiTemplate\\ApiServer\\ApiServer.SharedKernel\\ApiServer.Shared.csproj": {
+              "projectPath": "C:\\Projects\\WebApiTemplate\\ApiServer\\ApiServer.SharedKernel\\ApiServer.Shared.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

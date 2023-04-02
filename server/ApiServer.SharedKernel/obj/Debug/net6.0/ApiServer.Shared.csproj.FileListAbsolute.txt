@@ -1,0 +1,12 @@
+C:\Projects\WebApiTemplate\ApiServer\ApiServer.SharedKernel\bin\Debug\net6.0\ApiServer.Shared.deps.json
+C:\Projects\WebApiTemplate\ApiServer\ApiServer.SharedKernel\bin\Debug\net6.0\ApiServer.Shared.dll
+C:\Projects\WebApiTemplate\ApiServer\ApiServer.SharedKernel\bin\Debug\net6.0\ApiServer.Shared.pdb
+C:\Projects\WebApiTemplate\ApiServer\ApiServer.SharedKernel\obj\Debug\net6.0\ApiServer.Shared.csproj.AssemblyReference.cache
+C:\Projects\WebApiTemplate\ApiServer\ApiServer.SharedKernel\obj\Debug\net6.0\ApiServer.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\WebApiTemplate\ApiServer\ApiServer.SharedKernel\obj\Debug\net6.0\ApiServer.Shared.AssemblyInfoInputs.cache
+C:\Projects\WebApiTemplate\ApiServer\ApiServer.SharedKernel\obj\Debug\net6.0\ApiServer.Shared.AssemblyInfo.cs
+C:\Projects\WebApiTemplate\ApiServer\ApiServer.SharedKernel\obj\Debug\net6.0\ApiServer.Shared.csproj.CoreCompileInputs.cache
+C:\Projects\WebApiTemplate\ApiServer\ApiServer.SharedKernel\obj\Debug\net6.0\ApiServer.Shared.dll
+C:\Projects\WebApiTemplate\ApiServer\ApiServer.SharedKernel\obj\Debug\net6.0\refint\ApiServer.Shared.dll
+C:\Projects\WebApiTemplate\ApiServer\ApiServer.SharedKernel\obj\Debug\net6.0\ApiServer.Shared.pdb
+C:\Projects\WebApiTemplate\ApiServer\ApiServer.SharedKernel\obj\Debug\net6.0\ref\ApiServer.Shared.dll

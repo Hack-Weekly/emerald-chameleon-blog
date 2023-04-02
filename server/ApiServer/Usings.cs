@@ -1,0 +1,15 @@
+﻿global using ApiServer.Data.RepositoryInterfaces;
+global using ApiServer.DTO.WeatherForecast;
+global using ApiServer.AutoMapperProfiles;
+global using Microsoft.AspNetCore.Mvc;
+global using ApiServer.Domain.Entities.WeatherForecast;
+global using MediatR;
+global using ApiServer.Model;
+global using ApiServer.Data.EF;
+global using ApiServer.Data.EF.EntityRepositories;
+global using ApiServer.Domain;
+global using ApiServer.Shared;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.Extensions.DependencyInjection.Extensions;
+global using Microsoft.OpenApi.Models;
+global using Serilog;

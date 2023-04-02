@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "EZBXDKN4lUrNqxq6Q3kS5AIs1BUGXm6UIPr0cA1uHR6aIJNT9xinBYaCwmTJYVp0FK3pbp/PB+LTyCpHz9UW0g==",
+  "success": true,
+  "projectFilePath": "C:\\Projects\\WebApiTemplate\\ApiServer\\ApiServer.Domain\\ApiServer.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Travis\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
+    "C:\\Users\\Travis\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
+    "C:\\Users\\Travis\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\11.1.0\\mediatr.extensions.microsoft.dependencyinjection.11.1.0.nupkg.sha512",
+    "C:\\Users\\Travis\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\Travis\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

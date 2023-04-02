@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Custom\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="11.1.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ApiServer.Data\ApiServer.Data.csproj" />
+    <ProjectReference Include="..\ApiServer.DTO\ApiServer.DTO.csproj" />
+    <ProjectReference Include="..\ApiServer.Model\ApiServer.Model.csproj" />
+    <ProjectReference Include="..\ApiServer.SharedKernel\ApiServer.Shared.csproj" />
+  </ItemGroup>
+
+</Project>

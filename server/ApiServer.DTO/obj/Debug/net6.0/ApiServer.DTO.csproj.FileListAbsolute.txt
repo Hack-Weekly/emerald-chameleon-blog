@@ -1,0 +1,15 @@
+C:\Projects\WebApiTemplate\ApiServer\ApiServer.DTO\bin\Debug\net6.0\ApiServer.DTO.deps.json
+C:\Projects\WebApiTemplate\ApiServer\ApiServer.DTO\bin\Debug\net6.0\ApiServer.DTO.dll
+C:\Projects\WebApiTemplate\ApiServer\ApiServer.DTO\bin\Debug\net6.0\ApiServer.DTO.pdb
+C:\Projects\WebApiTemplate\ApiServer\ApiServer.DTO\bin\Debug\net6.0\ApiServer.Shared.dll
+C:\Projects\WebApiTemplate\ApiServer\ApiServer.DTO\bin\Debug\net6.0\ApiServer.Shared.pdb
+C:\Projects\WebApiTemplate\ApiServer\ApiServer.DTO\obj\Debug\net6.0\ApiServer.DTO.csproj.AssemblyReference.cache
+C:\Projects\WebApiTemplate\ApiServer\ApiServer.DTO\obj\Debug\net6.0\ApiServer.DTO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\WebApiTemplate\ApiServer\ApiServer.DTO\obj\Debug\net6.0\ApiServer.DTO.AssemblyInfoInputs.cache
+C:\Projects\WebApiTemplate\ApiServer\ApiServer.DTO\obj\Debug\net6.0\ApiServer.DTO.AssemblyInfo.cs
+C:\Projects\WebApiTemplate\ApiServer\ApiServer.DTO\obj\Debug\net6.0\ApiServer.DTO.csproj.CoreCompileInputs.cache
+C:\Projects\WebApiTemplate\ApiServer\ApiServer.DTO\obj\Debug\net6.0\ApiServer.DTO.csproj.CopyComplete
+C:\Projects\WebApiTemplate\ApiServer\ApiServer.DTO\obj\Debug\net6.0\ApiServer.DTO.dll
+C:\Projects\WebApiTemplate\ApiServer\ApiServer.DTO\obj\Debug\net6.0\refint\ApiServer.DTO.dll
+C:\Projects\WebApiTemplate\ApiServer\ApiServer.DTO\obj\Debug\net6.0\ApiServer.DTO.pdb
+C:\Projects\WebApiTemplate\ApiServer\ApiServer.DTO\obj\Debug\net6.0\ref\ApiServer.DTO.dll

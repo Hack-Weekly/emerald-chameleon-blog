@@ -1,0 +1,17 @@
+C:\Projects\WebApiTemplate\ApiServer\ApiServer.Data\bin\Debug\net6.0\ApiServer.Data.deps.json
+C:\Projects\WebApiTemplate\ApiServer\ApiServer.Data\bin\Debug\net6.0\ApiServer.Data.dll
+C:\Projects\WebApiTemplate\ApiServer\ApiServer.Data\bin\Debug\net6.0\ApiServer.Data.pdb
+C:\Projects\WebApiTemplate\ApiServer\ApiServer.Data\bin\Debug\net6.0\ApiServer.Model.dll
+C:\Projects\WebApiTemplate\ApiServer\ApiServer.Data\bin\Debug\net6.0\ApiServer.Shared.dll
+C:\Projects\WebApiTemplate\ApiServer\ApiServer.Data\bin\Debug\net6.0\ApiServer.Model.pdb
+C:\Projects\WebApiTemplate\ApiServer\ApiServer.Data\bin\Debug\net6.0\ApiServer.Shared.pdb
+C:\Projects\WebApiTemplate\ApiServer\ApiServer.Data\obj\Debug\net6.0\ApiServer.Data.csproj.AssemblyReference.cache
+C:\Projects\WebApiTemplate\ApiServer\ApiServer.Data\obj\Debug\net6.0\ApiServer.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\WebApiTemplate\ApiServer\ApiServer.Data\obj\Debug\net6.0\ApiServer.Data.AssemblyInfoInputs.cache
+C:\Projects\WebApiTemplate\ApiServer\ApiServer.Data\obj\Debug\net6.0\ApiServer.Data.AssemblyInfo.cs
+C:\Projects\WebApiTemplate\ApiServer\ApiServer.Data\obj\Debug\net6.0\ApiServer.Data.csproj.CoreCompileInputs.cache
+C:\Projects\WebApiTemplate\ApiServer\ApiServer.Data\obj\Debug\net6.0\ApiServer.Data.csproj.CopyComplete
+C:\Projects\WebApiTemplate\ApiServer\ApiServer.Data\obj\Debug\net6.0\ApiServer.Data.dll
+C:\Projects\WebApiTemplate\ApiServer\ApiServer.Data\obj\Debug\net6.0\refint\ApiServer.Data.dll
+C:\Projects\WebApiTemplate\ApiServer\ApiServer.Data\obj\Debug\net6.0\ApiServer.Data.pdb
+C:\Projects\WebApiTemplate\ApiServer\ApiServer.Data\obj\Debug\net6.0\ref\ApiServer.Data.dll

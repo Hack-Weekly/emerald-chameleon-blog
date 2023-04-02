@@ -1,0 +1,50 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "ApiServer.Data/1.0.0": {
+        "dependencies": {
+          "ApiServer.Model": "1.0.0",
+          "ApiServer.Shared": "1.0.0"
+        },
+        "runtime": {
+          "ApiServer.Data.dll": {}
+        }
+      },
+      "ApiServer.Model/1.0.0": {
+        "dependencies": {
+          "ApiServer.Shared": "1.0.0"
+        },
+        "runtime": {
+          "ApiServer.Model.dll": {}
+        }
+      },
+      "ApiServer.Shared/1.0.0": {
+        "runtime": {
+          "ApiServer.Shared.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ApiServer.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ApiServer.Model/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ApiServer.Shared/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
