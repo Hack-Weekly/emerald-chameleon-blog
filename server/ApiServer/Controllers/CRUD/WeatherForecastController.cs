@@ -1,4 +1,5 @@
 using ApiServer.AutoMapperProfiles;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ApiServer.Controllers.CRUD
@@ -22,6 +23,7 @@ namespace ApiServer.Controllers.CRUD
         }
 
         [HttpGet(Name = "GetWeatherForecast")]
+        [Authorize]
         public async Task<ActionResult<IEnumerable<GetWeatherForecastDTO>>> Get(CancellationToken token)
         {
             _logger.LogDebug("Example Debug Log Message - In GetWeatherForecast");
