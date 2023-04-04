@@ -12,5 +12,14 @@ $link-color: $secondary;
 $input-bg: v.$neutral-500;
 $input-border-color: v.$neutral-500;
 
+// Nav Dropdown
+.custom-dropdown {
+    .dropdown-item.active {
+        background-color: v.$neutral-300 !important;
+    }
+  }
+
+
+
 // Import Preset Overrides to bootstrap
 @import "~bootstrap/scss/bootstrap.scss";
