@@ -16,7 +16,8 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
-    project: './tsconfig.json',
+    project: 'client/tsconfig.json',
+    tsconfigRootDir: __dirname,
   },
   plugins: ['react', '@typescript-eslint', 'prettier'],
   rules: {
@@ -25,6 +26,12 @@ module.exports = {
       'error',
       'single',
       { avoidEscape: true, allowTemplateLiterals: true },
+    ],
+    'prettier/prettier': [
+      'error',
+      {
+        endOfLine: 'auto',
+      },
     ],
   },
 }
