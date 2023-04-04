@@ -12,31 +12,8 @@ $link-color: $secondary;
 $input-bg: v.$neutral-500;
 $input-border-color: v.$neutral-500;
 
-// Nav Dropdown
-.custom-dropdown {
-  .dropdown-item.active {
-     background-color: v.$neutral-300 !important;
-  }
-}
-
-// Gradient Effect on Text
-.gradient-text {
-  background-color: v.$neutral-50;
-  background-image: linear-gradient(0deg, #669F28, #B3EE74 );
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent; 
-  -moz-text-fill-color: transparent;
-}
-
-// Large Text that isn't a Heading Tag
-.large-text {
-  font-size: calc(1.375rem + 1.5vw);
-  font-weight: 700;
-}
-
-
+// Dropdown menu
+$dropdown-link-active-bg: v.$neutral-300;
 
 // Import Preset Overrides to bootstrap
 @import "~bootstrap/scss/bootstrap.scss";

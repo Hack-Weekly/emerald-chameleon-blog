@@ -1,0 +1,18 @@
+@use '../../scss/variables.scss' as v;
+
+
+// Gradient Effect on Text
+.gradient-text {
+background-color: v.$neutral-50;
+background-image: linear-gradient(0deg, #669F28, #B3EE74 );
+background-size: 100%;
+-webkit-background-clip: text;
+-moz-background-clip: text;
+-webkit-text-fill-color: transparent; 
+-moz-text-fill-color: transparent;
+}
+
+// Large Text (equivalent to H1)
+.large-text {
+font-size: v.$font-size-xxl;
+}

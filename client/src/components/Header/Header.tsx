@@ -2,6 +2,7 @@ import React, { FormEvent } from 'react'
 import chameleonIcon from '/chameleon.svg'
 import searchIcon from '/search.svg'
 import personIcon from '/person-circle.svg'
+import './header.scss'
 import '../../scss/_globals.scss'
 import { Navbar, Container, Nav, Col, NavDropdown, Form, Button} from 'react-bootstrap'
 
@@ -10,7 +11,6 @@ const Header = () => {
 
   const handleMobileSearchClick = () => {
     console.log('do something when search icon is clicked in mobile view')
-    
   }
 
   const handleFormSubmit = () => {
@@ -29,7 +29,7 @@ const Header = () => {
                   height="40"
                   className="d-inline-block align-top me-3"
                 />
-                <span className='d-none d-md-inline-block text-primary font-weight-bolder mb-0 gradient-text large-text'>Emerald Blog</span>
+                <span className='d-none d-md-inline-block text-primary font-weight-bolder mb-0 gradient-text large-text font-weight-bold'>Emerald Blog</span>
               </Navbar.Brand>
       
             <Nav className="text-center ms-auto d-flex align-items-center">
