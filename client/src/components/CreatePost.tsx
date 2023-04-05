@@ -6,21 +6,25 @@ import { LinkContainer } from 'react-router-bootstrap'
 
 type CreateChatValues = {
   title: string,
-  description: string,
+  body: string,
+  tags: [],
+  category: string,
 }
 
 export default function CreateNewChat() {
   const [route, setRoute] = useState('')
   const [formValues, setFormValues] = useState<CreateChatValues>({
     title: '',
-    description: '',
+    body: '',
+    tags: [],
+    category: '',
   })
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { title, value } = e.target
+    const { name, value } = e.target
     setFormValues({
       ...formValues,
-      [title]: value,
+      [name]: value,
     })
   }
 
@@ -63,11 +67,11 @@ export default function CreateNewChat() {
         </Container>
             <Form onSubmit={handleSubmit}>
                 <Form.Group>
+                    <Form.Label>Title</Form.Label>
                     <Form.Control 
-                    id="name"
+                    id="title"
                     type="text"
                     name="title"
-                    placeholder="Title"
                     required
                     value={formValues.title}
                     onChange={handleInputChange}
@@ -75,19 +79,51 @@ export default function CreateNewChat() {
                 </Form.Group>
 
                 <Form.Group>
+                    <Form.Label>Body</Form.Label>
                     <Form.Control 
-                    id="description"
+                    id="body"
                     type="text"
-                    name="description"
-                    placeholder="Description"
+                    name="body"
                     required
-                    value={formValues.description}
+                    value={formValues.body}
                     onChange={handleInputChange}
                     />
                 </Form.Group>
 
+                <Form.Group>
+                    <Form.Label>Tags</Form.Label>
+                    <Form.Control 
+                    id="tags"
+                    type="text"
+                    name="tags"
+                    value={formValues.tags}
+                    onChange={handleInputChange}
+                    />
+                </Form.Group>
+
+                <Form.Group>
+                    <Form.Label>Category</Form.Label>
+                    <Form.Control 
+                    id="category"
+                    type="text"
+                    name="category"
+                    value={formValues.category}
+                    onChange={handleInputChange}
+                    />
+                </Form.Group>
+
+                <Form.Group>
+                    <Form.Label>Image</Form.Label>
+                    <Form.Control 
+                    id="uploadImage"
+                    type="file"
+                    name="image"
+                    />
+                </Form.Group>
+
                 <Container>
-                    <Button type="submit">Create Post</Button>
+                    <Button variant="primary" type="submit">Create Post</Button>
+                    <Button variant="outline-secondary">Cancel</Button>
                 </Container>
             </Form>
         </Container>
