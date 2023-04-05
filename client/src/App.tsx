@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="container py-4 px-3 mx-auto">
       <Router>
-        <h1>Header goes here</h1>
+       <Header />
 
         <Routes>
           <Route path="/login" element={<LoginForm />} />

@@ -1,17 +1,13 @@
-import React, { FormEvent } from 'react'
+
 import chameleonIcon from '/chameleon.svg'
 import searchIcon from '/search.svg'
 import personIcon from '/person-circle.svg'
 import './header.scss'
 import '../../scss/_globals.scss'
-import { Navbar, Container, Nav, Col, NavDropdown, Form, Button, Offcanvas} from 'react-bootstrap'
+import { Navbar, Container, Nav, Col, NavDropdown, Form, Button } from 'react-bootstrap'
 
 
 const Header = () => {
-
-  const handleMobileSearchClick = () => {
-    console.log('do something when search icon is clicked in mobile view')
-  }
 
   const handleFormSubmit = () => {
     console.log('do something when form is submitted from navbar on larger screen sizes')
@@ -19,30 +15,10 @@ const Header = () => {
   
   return (
       <Container className='shadow' >
-        <Navbar sticky='top' key='md' expand='xxl'>
+        <Navbar sticky='top' >
           <Container fluid>
             <Col>
-            <Navbar.Toggle aria-controls='offcanvasNavbar-expand-lg' className='border-0'/>
-            <Navbar.Offcanvas 
-               id='offcanvasNavbar-expand-sm'
-               aria-labelledby='offcanvasNavbar-expand-lg'
-               placement='start' >
-              <Offcanvas.Header closeButton>
-                <Offcanvas.Title id='offcanvasNavbarLabel-expand-lg'>
-                  Offcanvas
-                </Offcanvas.Title>
-              </Offcanvas.Header>
-              <Offcanvas.Body>
-                <Nav className='justify-content-end flex-grow-1 pe-3'>
-                <Nav.Link href='#'>User Name</Nav.Link>
-                <Nav.Link href='#'>Create Post</Nav.Link>
-
-                </Nav>
-              </Offcanvas.Body>
-            </Navbar.Offcanvas>
-            </Col>
-            <Col>
-              <Navbar.Brand href="/" className='d-flex align-items-end ms-auto'>
+              <Navbar.Brand href="/" className='d-flex align-items-center ms-auto'>
                 <img
                   alt=""
                   src={chameleonIcon}
@@ -51,40 +27,32 @@ const Header = () => {
                   className="d-inline-block align-top me-3"
                 />
                 <span className='d-none d-md-inline-block text-primary font-weight-bolder mb-0 gradient-text large-text font-weight-bold'>Emerald Blog</span>
-              </Navbar.Brand>
-            </Col>
-            <Col>
-            <Nav className="text-center ms-auto d-flex flex-row align-items-center">
-              <Form className="d-flex flex-row" onSubmit={handleFormSubmit}>
-                  <Form.Control
-                    type="search"
-                    placeholder="Search"
-                    className="me-2 bg-white border border-secondary d-none d-lg-flex "
-                    aria-label="Search"
-                  />
-                  <Button variant="none" type="submit">
-                    <img src={searchIcon} alt="search-icon" width='25' height='25'  />
-                  </Button>
-              </Form>
-           
-              {/* <Nav.Item className='mx-2 d-lg-none' onClick={handleMobileSearchClick}>
-                  <img src={searchIcon} alt="search-icon" width='25' height='25'  />
-                </Nav.Item> */}
-                <Nav.Item className='ms-2 me-0'>
-                  <img src={personIcon} alt="person-icon" width='25' height='25'  />
-                </Nav.Item>
-                
-                {/* <NavDropdown title={'Guest'} id="nav-dropdown" align={"end"} className='custom-dropdown d-none d-lg-inline-block'>
-                  <NavDropdown.Item eventKey="4.1" className='text-primary'>USERNAME</NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item eventKey="4.2" className='text-secondary'>Create Post</NavDropdown.Item>
-                  <NavDropdown.Item eventKey="4.3" className='text-secondary'>Profile</NavDropdown.Item>
-                  <NavDropdown.Item eventKey="4.4" className='text-secondary'>Favorites</NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item eventKey="4.5">Log In/Out</NavDropdown.Item>
-                </NavDropdown> */}
-              </Nav>
-              </Col>
+             </Navbar.Brand>
+           </Col>
+           <Col className='d-flex justify-content-end ms-auto'>
+            <Form className="d-flex flex-row  " onSubmit={handleFormSubmit}>
+              <Form.Control
+                type="search"
+                placeholder={"Search"}
+                className="me-2 bg-white border border-secondary border-right-0"
+                aria-label="Search"
+              />
+              <Button variant="none" type="submit">
+                <img src={searchIcon} alt="search-icon" width='25' height='25'  />
+              </Button>
+            </Form>
+            <Nav className="text-center d-flex flex-row align-items-center">
+              <NavDropdown title={ <img src={personIcon} alt="person-icon" width='25' height='25'  />} id="nav-dropdown" align={"end"} className='custom-dropdown'>
+                <NavDropdown.Item eventKey="4.1" className='text-primary'>USERNAME</NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item eventKey="4.2" className='text-secondary'>Create Post</NavDropdown.Item>
+                <NavDropdown.Item eventKey="4.3" className='text-secondary'>Profile</NavDropdown.Item>
+                <NavDropdown.Item eventKey="4.4" className='text-secondary'>Favorites</NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item eventKey="4.5">Log In/Out</NavDropdown.Item>
+              </NavDropdown>
+            </Nav>
+          </Col>
         </Container>
       </Navbar>
      </Container>
