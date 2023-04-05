@@ -1,13 +1,22 @@
-import { useState } from 'react'
+
+import { Footer } from './components/Footer'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { Container } from 'react-bootstrap'
+import LoginForm from './components/LoginForm'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="container py-4 px-3 mx-auto">
-      <h1>Emerald Chameleon Blog</h1>
-      <button className="btn btn-primary">Click to create winning project</button>
-    </div>
+    <Container fluid>
+      <Router>
+        <h1>Header goes here</h1>
+        
+        <Routes>
+          <Route path="/login" element={<LoginForm />} />
+        </Routes>
+
+        <Footer />
+      </Router>
+    </Container>
   )
 }
 
