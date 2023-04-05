@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import PostCard from './components/PostCard'
+
 import CardGrid from './components/CardGrid'
 import LoginForm from './components/LoginForm'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
@@ -11,7 +11,7 @@ function App() {
     <div className="container py-4 px-3 mx-auto">
       <Router>
         <h1>Header goes here</h1>
-
+        <CardGrid />
         <Routes>
           <Route path="/login" element={<LoginForm />} />
         </Routes>
