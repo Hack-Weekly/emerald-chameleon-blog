@@ -4,7 +4,7 @@ import searchIcon from '/search.svg'
 import personIcon from '/person-circle.svg'
 import './header.scss'
 import '../../scss/_globals.scss'
-import { Navbar, Container, Nav, Col, NavDropdown, Form, Button} from 'react-bootstrap'
+import { Navbar, Container, Nav, Col, NavDropdown, Form, Button, Offcanvas} from 'react-bootstrap'
 
 
 const Header = () => {
@@ -19,9 +19,30 @@ const Header = () => {
   
   return (
       <Container className='shadow' >
-        <Navbar sticky='top' >
+        <Navbar sticky='top' key='md' expand='xxl'>
           <Container fluid>
-              <Navbar.Brand href="/" className='d-flex align-items-end'>
+            <Col>
+            <Navbar.Toggle aria-controls='offcanvasNavbar-expand-lg' className='border-0'/>
+            <Navbar.Offcanvas 
+               id='offcanvasNavbar-expand-sm'
+               aria-labelledby='offcanvasNavbar-expand-lg'
+               placement='start' >
+              <Offcanvas.Header closeButton>
+                <Offcanvas.Title id='offcanvasNavbarLabel-expand-lg'>
+                  Offcanvas
+                </Offcanvas.Title>
+              </Offcanvas.Header>
+              <Offcanvas.Body>
+                <Nav className='justify-content-end flex-grow-1 pe-3'>
+                <Nav.Link href='#'>User Name</Nav.Link>
+                <Nav.Link href='#'>Create Post</Nav.Link>
+
+                </Nav>
+              </Offcanvas.Body>
+            </Navbar.Offcanvas>
+            </Col>
+            <Col>
+              <Navbar.Brand href="/" className='d-flex align-items-end ms-auto'>
                 <img
                   alt=""
                   src={chameleonIcon}
@@ -31,27 +52,29 @@ const Header = () => {
                 />
                 <span className='d-none d-md-inline-block text-primary font-weight-bolder mb-0 gradient-text large-text font-weight-bold'>Emerald Blog</span>
               </Navbar.Brand>
-      
-            <Nav className="text-center ms-auto d-flex align-items-center">
-              <Form className="d-none d-lg-flex" onSubmit={handleFormSubmit}>
+            </Col>
+            <Col>
+            <Nav className="text-center ms-auto d-flex flex-row align-items-center">
+              <Form className="d-flex flex-row" onSubmit={handleFormSubmit}>
                   <Form.Control
                     type="search"
                     placeholder="Search"
-                    className="me-2 bg-white border border-secondary"
+                    className="me-2 bg-white border border-secondary d-none d-lg-flex "
                     aria-label="Search"
                   />
                   <Button variant="none" type="submit">
                     <img src={searchIcon} alt="search-icon" width='25' height='25'  />
                   </Button>
               </Form>
-                <Nav.Item className='mx-2 d-lg-none' onClick={handleMobileSearchClick}>
+           
+              {/* <Nav.Item className='mx-2 d-lg-none' onClick={handleMobileSearchClick}>
                   <img src={searchIcon} alt="search-icon" width='25' height='25'  />
-                </Nav.Item>
+                </Nav.Item> */}
                 <Nav.Item className='ms-2 me-0'>
-                  <img src={personIcon} alt="search-icon" width='25' height='25'  />
+                  <img src={personIcon} alt="person-icon" width='25' height='25'  />
                 </Nav.Item>
                 
-                <NavDropdown title='' id="nav-dropdown" align={"end"} className='custom-dropdown'>
+                {/* <NavDropdown title={'Guest'} id="nav-dropdown" align={"end"} className='custom-dropdown d-none d-lg-inline-block'>
                   <NavDropdown.Item eventKey="4.1" className='text-primary'>USERNAME</NavDropdown.Item>
                   <NavDropdown.Divider />
                   <NavDropdown.Item eventKey="4.2" className='text-secondary'>Create Post</NavDropdown.Item>
@@ -59,8 +82,9 @@ const Header = () => {
                   <NavDropdown.Item eventKey="4.4" className='text-secondary'>Favorites</NavDropdown.Item>
                   <NavDropdown.Divider />
                   <NavDropdown.Item eventKey="4.5">Log In/Out</NavDropdown.Item>
-                </NavDropdown>
+                </NavDropdown> */}
               </Nav>
+              </Col>
         </Container>
       </Navbar>
      </Container>
