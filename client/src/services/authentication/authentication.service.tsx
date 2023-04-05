@@ -7,7 +7,7 @@ import {
 } from './types/authentication.type'
 
 export async function Register(registerDTO: RegisterDTO) {
-  const url = `${process.env.NEXT_PUBLIC_API_URL}/users/register`
+  const url = `/users/register`
 
   const res = await fetch(url, {
     method: 'POST',
@@ -22,7 +22,7 @@ export async function Register(registerDTO: RegisterDTO) {
 }
 
 export async function Login(loginDTO: LoginDTO) {
-  const url = `${process.env.NEXT_PUBLIC_API_URL}/users/login`
+  const url = `/users/login`
 
   const res = await fetch(url, {
     method: 'POST',

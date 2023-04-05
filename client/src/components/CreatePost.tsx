@@ -64,7 +64,7 @@ const CreatePost = () => {
                 required
                 value={formValues.body}
                 onChange={handleInputChange}
-                className="h-25"
+                className="h-50"
                 />
             </Form.Group>
 
