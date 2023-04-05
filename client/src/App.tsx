@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import LoginForm from './components/LoginForm'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 
 import Header from './components/Header/Header'
@@ -10,12 +12,14 @@ function App() {
 
   return (
     <div className="container py-4 px-3 mx-auto">
- 
-          <Header />
+      <Router>
+        <h1>Header goes here</h1>
 
-       
-     
-      
+        <Routes>
+          <Route path="/login" element={<LoginForm />} />
+        </Routes>
+
+      </Router>
     </div>
   )
 }
