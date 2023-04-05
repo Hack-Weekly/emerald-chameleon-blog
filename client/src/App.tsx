@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import LoginForm from './components/LoginForm'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import CreatePost from './components/CreatePost'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -13,7 +12,6 @@ function App() {
 
         <Routes>
           <Route path="/login" element={<LoginForm />} />
-          <Route path="/post" element={<CreatePost />} />
         </Routes>
 
       </Router>
