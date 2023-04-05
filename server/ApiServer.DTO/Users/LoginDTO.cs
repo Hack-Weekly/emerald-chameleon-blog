@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ApiServer.DTO.Users
 {
-    public class LoginDTO
+    public class LoginDTO : IDTO
     {
         public string? UserId { get; set; }
         public string? Email { get; set; }

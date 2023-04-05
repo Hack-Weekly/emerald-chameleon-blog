@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ApiServer.DTO.Users
 {
-    public class TokenValidationResponseDTO
+    public class TokenValidationResponseDTO : IDTO
     {
         public int Id { get; set; }
 
