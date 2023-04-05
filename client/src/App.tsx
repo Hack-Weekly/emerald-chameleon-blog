@@ -1,25 +1,27 @@
 import { useState } from 'react'
 import './scss/styles.scss' 
 import CardGrid from './components/CardGrid/CardGrid' 
+import { Footer } from './components/Footer'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { Container } from 'react-bootstrap'
 import LoginForm from './components/LoginForm'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="container py-4 px-3 mx-auto" style={{ backgroundColor: '#f2f2f2'}}>
+    <Container fluid>
+
       <Router>
         <h1>Header goes here</h1>
-
+        
         <Routes>
           <Route path="/login" element={<LoginForm />} />
           {/* replace card grid with home page when we have it */}
           <Route path="/" element={<CardGrid />} />
         </Routes>
 
+        <Footer />
       </Router>
-    </div>
+    </Container>
   )
 }
 

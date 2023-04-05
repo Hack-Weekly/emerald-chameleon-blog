@@ -1,17 +1,15 @@
-/* Custom Variables in addition to presets to use if needed */
+@use 'styles' as v;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
 
-// Primary Colors
-$primary-100: #B3EE74;
-$primary-300: #80CF2B;
-$primary-500: #669F28;
+html {
+    scroll-behavior: smooth;
+}
 
-// Secondary Colors
-$secondary-300: #DE528C;
-$secondary-500: #B42E66;
+h1 {
+    color: v.$primary;
+}
 
-// Neutral Colors
-$neutral-50: #FCFCFC;
-$neutral-100: #F2F2F2;
-$neutral-300: #D6D6D6;
-$neutral-500: #88878A;
-$neutral-900: #0D0D0D;
+h2 {
+    color: v.$secondary;
+}
+

@@ -1,3 +1,4 @@
+/* Custom Variables in addition to presets to use if needed */
 
 // Primary Colors
 $primary-100: #B3EE74;
@@ -15,23 +16,3 @@ $neutral-300: #D6D6D6;
 $neutral-500: #88878A;
 $neutral-900: #0D0D0D;
 
-// Font Sizes
-$font-3xl: 35px;
-$font-2xl: 30px;
-$font-xl: 21px;
-$font-lg: 18px;
-$font-md: 16px;
-$font-sm: 14px;
-
-// Font Size for when small text is needed
-$font-xs: 10px;
-
-// Desktop Font Sizes
-$heading: $font-3xl;
-$subheading: $font-2xl;
-$body: $font-md;
-
-// Mobile Font Sizes
-$heading-mobile: $font-xl;
-$subheading-mobile: $font-lg;
-$body-mobile: $font-sm;
