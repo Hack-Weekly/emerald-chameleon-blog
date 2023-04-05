@@ -59,11 +59,12 @@ const CreatePost = () => {
                 <Form.Label>Body</Form.Label>
                 <Form.Control 
                 id="body"
-                type="text"
+                as="textarea"
                 name="body"
                 required
                 value={formValues.body}
                 onChange={handleInputChange}
+                className="h-25"
                 />
             </Form.Group>
 
@@ -74,17 +75,6 @@ const CreatePost = () => {
                 type="text"
                 name="tags"
                 value={formValues.tags}
-                onChange={handleInputChange}
-                />
-            </Form.Group>
-
-            <Form.Group className="my-3">
-                <Form.Label>Category</Form.Label>
-                <Form.Control 
-                id="category"
-                type="text"
-                name="category"
-                value={formValues.category}
                 onChange={handleInputChange}
                 />
             </Form.Group>
