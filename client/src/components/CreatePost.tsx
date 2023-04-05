@@ -42,7 +42,7 @@ const CreatePost = () => {
 
     return (
         <Form onSubmit={handleSubmit} className='border p-3 rounded-5'>
-            <h2 className="text-center">New Chat</h2>
+            <h2 className="text-center">New Article</h2>
             <Form.Group className="my-3">
                 <Form.Label>Title</Form.Label>
                 <Form.Control 
