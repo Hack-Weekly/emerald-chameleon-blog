@@ -29,7 +29,7 @@ const LoginForm = () => {
 
     useEffect(() => {
         if (loggedInUser && loggedInUser.username) {
-            setRoute('/profile')
+            setRoute('/dashboard')
         }
     })
 
