@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ApiServer.DTO.Users
 {
-    public class RegisterDTO
+    public class RegisterDTO : IDTO
     {
         public string? Name { get; set; }
 
