@@ -13,7 +13,7 @@ import CardGrid from './components/CardGrid/CardGrid'
 
 function App() {
   return (
-    <Container fluid style={{ backgroundColor: '#f2f2f2'}}>
+    <Container fluid>
       <Router>
        <Header />
         <Routes>
