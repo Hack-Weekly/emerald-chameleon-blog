@@ -1,0 +1,6 @@
+@use '../../scss/variables.scss' as v;
+
+// Large Text (equivalent to H1)
+.large-text {
+font-size: v.$font-size-xxl;
+}

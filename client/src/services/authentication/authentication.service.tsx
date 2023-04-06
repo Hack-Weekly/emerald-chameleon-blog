@@ -7,8 +7,12 @@ import {
 } from './types/authentication.type'
 
 export async function Register(registerDTO: RegisterDTO) {
+<<<<<<< HEAD
   const url = ''
   // const url = `${process.env.NEXT_PUBLIC_API_URL}/users/register`
+=======
+  const url = `/users/register`
+>>>>>>> main
 
   const res = await fetch(url, {
     method: 'POST',
@@ -23,8 +27,13 @@ export async function Register(registerDTO: RegisterDTO) {
 }
 
 export async function Login(loginDTO: LoginDTO) {
+<<<<<<< HEAD
   // const url = `${process.env.NEXT_PUBLIC_API_URL}/users/login`
   const url =''
+=======
+  const url = `/users/login`
+
+>>>>>>> main
   const res = await fetch(url, {
     method: 'POST',
     headers: {
