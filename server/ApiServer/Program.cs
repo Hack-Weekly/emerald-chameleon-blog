@@ -3,6 +3,7 @@ using ApiServer.Shared.Services.AuthServices;
 using ApiServer.SharedInterfaces;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using ApiServer.Data.RepositoryInterfaces;
 
 var config = new ConfigurationBuilder()
     .AddJsonFile("appsettings.json")
@@ -88,8 +89,11 @@ Log.Logger = new LoggerConfiguration()
     builder.Services.AddScoped<IUserService, UserService>();
     builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
     builder.Services.AddScoped<IEmailService, EmailService>();
+    builder.Services.AddScoped<IBlogPostRepository, BlogPostRepository>();
+    builder.Services.AddScoped<IBlogPostLikeRepository, BlogPostLikeRepository>();
+    builder.Services.AddScoped<IBlogPostCommentRepository, BlogPostCommentRepository>();
 
-    builder.Services.AddCors();
+builder.Services.AddCors();
 
     builder.Services.AddMediatR(x => x.AsScoped(), typeof(MediatrAssembly));
 
