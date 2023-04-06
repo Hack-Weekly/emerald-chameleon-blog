@@ -1,7 +1,11 @@
-﻿using ApiServer.DTO.Users;
+﻿using ApiServer.Data.EF.EntityRepositories;
+using ApiServer.Domain.Entities.BlogPost;
+using ApiServer.Domain.Entities.User;
+using ApiServer.DTO.BlogPosts;
+using ApiServer.DTO.Users;
 using ApiServer.Shared.Services.AuthServices.Interfaces;
 using Microsoft.AspNetCore.Authorization;
-
+using System.Runtime.CompilerServices;
 
 namespace ApiServer.Controllers.Custom
 {
@@ -12,11 +16,25 @@ namespace ApiServer.Controllers.Custom
     {
         private readonly IUserService _userService;
         private readonly IAuthenticationService _authenticationService;
+        private readonly IUserRepository _userRepository;
+        private readonly ILogger<UsersController> _logger;
+        private readonly IMediator _mediator;
 
-        public UsersController(IUserService userService, IAuthenticationService authenticationService)
+        public UsersController(IUserService userService, IAuthenticationService authenticationService, IUserRepository userRepository, ILogger<UsersController> logger, IMediator mediator)
         {
             _userService = userService;
             _authenticationService = authenticationService;
+            _logger = logger;
+            _userRepository = userRepository;
+            _mediator = mediator;
+        }
+
+        [HttpGet(Name = "GetUsers")]
+        public async Task<ActionResult<IEnumerable<GetUsersDTO>>> Get(CancellationToken token)
+        {
+            _logger.LogDebug("Example Debug Log Message - In GetWeatherForecast");
+            var response = await _mediator.Send(new GetAllUsersQuery(), token);
+            return Ok(response.ToList().MapToDTO<IEnumerable<GetUsersDTO>>());
         }
 
 

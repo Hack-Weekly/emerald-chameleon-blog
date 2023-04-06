@@ -16,12 +16,13 @@ const PostCard= (props: PostCardProps) => {
  
   return (
     <Link to={`/BlogPost/${props.post.id}`} className='text-decoration-none'>
+
       <Card style={{ width: '18rem' }} className={`p-2 text-light h-100  mx-auto ${props.bgColor}`}>
         <Card.Img variant="top" src="/testImage1.png" />
         <Card.Body>
           <Card.Title>{props.post.title}</Card.Title>
-          <Card.Subtitle>MM/DD/YYYY</Card.Subtitle>
-          <Card.Text >
+          <Card.Subtitle className='fs-6 my-2'>MM/DD/YYYY</Card.Subtitle>
+          <Card.Text className='fw-normal' >
             {cardBody}
           </Card.Text>
         </Card.Body>
