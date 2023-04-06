@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
 /* Custom Variables in addition to presets to use if needed */
 
 // Primary Colors
@@ -15,4 +17,8 @@ $neutral-100: #F2F2F2;
 $neutral-300: #D6D6D6;
 $neutral-500: #88878A;
 $neutral-900: #0D0D0D;
+
+// H1 equivalent font-size
+$font-size-xxl: calc(1.375rem + 1.5vw);
+
 
