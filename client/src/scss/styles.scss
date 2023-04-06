@@ -1,1 +1,16 @@
-@import "~bootstrap/scss/bootstrap.scss"
+@use 'variables' as v;
+/* Override preset styles */
+
+// Colors
+$primary: green;
+$secondary: v.$secondary-500;
+
+// Link Colors
+$link-color: $secondary;
+
+// Input & Select Colors
+$input-bg: v.$neutral-500;
+$input-border-color: v.$neutral-500;
+
+// Import Preset Overrides to bootstrap
+@import "~bootstrap/scss/bootstrap.scss";
