@@ -18,48 +18,6 @@ using System.Threading.Tasks;
 
 namespace ApiServer.Domain.Tests.BlogPost
 {
-    //public class CreateBlogPostCommandHandlerTests
-    //{
-    //    private readonly ILogger<CreateBlogPostCommandHandler> _logger;
-    //    private readonly Mock<IConfiguration> _mockConfiguration = new Mock<IConfiguration>();
-
-    //    public CreateBlogPostCommandHandlerTests()
-    //    {
-    //        _logger = Mock.Of<ILogger<CreateBlogPostCommandHandler>>();
-    //    }
-
-    //    [Fact]
-    //    public async Task Create_BlogPost_ComandHandler_ReturnsAGuid()
-    //    {
-    //        //Arrange
-    //        //var context = Mock.Of<IBlogPostRepository>();
-
-    //        //var repository = new Mock<IBlogPostRepository>();
-    //        var context = Mock<MainDbContext>;
-    //        var repository = new BlogPostRepository()
-            
-    //        var userId = Guid.NewGuid();
-    //        var blogPostId = Guid.NewGuid();
-    //        var blogPostModel = new Model.BlogPost
-    //        {
-    //            Author = new Model.User { Name = "Greg", Id = userId, Email = "test@.com" },
-    //            AuthorId = userId,
-    //            Id = blogPostId,
-    //            Title = "Title",
-    //            PostContent = "Post contetnt ahhashhsd",
-    //            ImageLocation = ",,"
-    //        };
-
-    //        repository.Setup(x => x.CreateAsync(blogPostModel, default, true)).Returns(Task.FromResult(blogPostModel));
-
-    //        var sut = new CreateBlogPostCommandHandler(_logger, repository.Object);
-     
-
-    //        //Act
-    //        var result = await sut.Handle(new CreateBlogPostCommand(blogPostModel), default);
-
-    //        //Assert
-    //        Assert.True(result == blogPostId);
-    //    }
-   // }
+    public class CreateBlogPostCommandHandlerTests
+    }
 }
