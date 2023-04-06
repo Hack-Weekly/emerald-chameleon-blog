@@ -1,0 +1,21 @@
+@use '../../scss/variables.scss' as v;
+
+.text-light {
+    color: v.$neutral-50;
+}
+
+.black {
+    background-color: v.$neutral-900;
+}
+
+.grey {
+    background-color: v.$neutral-500;
+}
+
+.green {
+    background-color: v.$primary-500;
+}
+
+.pink {
+    background-color: v.$secondary-500;
+}
