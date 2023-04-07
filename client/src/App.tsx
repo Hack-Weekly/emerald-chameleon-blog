@@ -11,7 +11,7 @@ import Home from './components/Home/Home'
 
 function App() {
   return (
-    <Container fluid className="">
+    <Container fluid>
       <Router>
         <Header />
         <main>

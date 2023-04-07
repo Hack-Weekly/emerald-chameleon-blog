@@ -3,15 +3,16 @@ import Sidebar from '../Sidebar/Sidebar'
 import CardGrid from '../CardGrid/CardGrid'
 import './home.scss'
 import { Container, Row, Col} from 'react-bootstrap'
+import FilterBar from '../FilterBar'
 
 type Props = {}
 
 const Home = (props: Props) => {
   return (
    
-      <Container fluid className="d-flex flex-column p-2 container-fluid">
+      <Container fluid className="d-flex flex-column p-2">
           <Row className='w-100'>
-            <h2>Filter Bar</h2>
+            <Col><FilterBar /></Col>
           </Row>
           <Row>
             <Col lg={9} md={8}>

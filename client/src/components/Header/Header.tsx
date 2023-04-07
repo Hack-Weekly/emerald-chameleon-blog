@@ -15,9 +15,9 @@ const Header = () => {
   
   return (
       // <Container className='shadow' >
-        <Navbar sticky='top' className='shadow bg-body'>
+        <Navbar sticky='top' className='shadow bg-body p-3'>
           <Container fluid>
-            <Col>
+            <Col sm={2}>
               <Navbar.Brand href="/" className='d-flex align-items-center ms-auto'>
                 <img
                   alt=""
