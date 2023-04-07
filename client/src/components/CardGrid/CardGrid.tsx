@@ -32,7 +32,7 @@ const CardGrid: React.FC = () => {
     
     return (
       <Container className=''>
-        <Row xs={1} md={2} lg={3} className="g-4 my-0">
+        <Row xs={1} md={2} lg={3} className="my-0 g-4">
           {posts.map((post, index) => (
             <Col key={post.id}>
               <PostCard post={post} bgColor={bgColors[index % bgColors.length]}/>

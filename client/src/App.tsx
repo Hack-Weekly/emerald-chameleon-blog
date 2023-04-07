@@ -11,13 +11,15 @@ import Home from './components/Home/Home'
 
 function App() {
   return (
-    <Container fluid >
+    <Container fluid className="">
       <Router>
         <Header />
-        <Routes>
-          <Route path="/login" element={<LoginForm />} />
-          <Route path="/" element={<Home />} />
-        </Routes>
+        <main>
+          <Routes>
+            <Route path="/login" element={<LoginForm />} />
+            <Route path="/" element={<Home />} />
+          </Routes>
+          </main>
         <Footer />
       </Router>
     </Container>

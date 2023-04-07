@@ -2,7 +2,7 @@
 import chameleonIcon from '/chameleon.svg'
 import searchIcon from '/search.svg'
 import personIcon from '/person-circle.svg'
-import './header.scss'
+
 import '../../scss/_globals.scss'
 import { Navbar, Container, Nav, Col, NavDropdown, Form, Button } from 'react-bootstrap'
 
@@ -14,8 +14,8 @@ const Header = () => {
   }
   
   return (
-      <Container className='shadow' >
-        <Navbar sticky='top' >
+      // <Container className='shadow' >
+        <Navbar sticky='top' className='shadow bg-body'>
           <Container fluid>
             <Col>
               <Navbar.Brand href="/" className='d-flex align-items-center ms-auto'>
@@ -55,7 +55,7 @@ const Header = () => {
           </Col>
         </Container>
       </Navbar>
-     </Container>
+    //  </Container>
   )
 }
 
