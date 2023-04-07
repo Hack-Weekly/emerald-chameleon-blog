@@ -10,7 +10,7 @@ type Props = {}
 const Home = (props: Props) => {
   return (
    
-      <Container fluid className="d-flex flex-column p-2">
+      <Container fluid className="d-flex flex-column p-3">
           <Row className='w-100'>
             <Col><FilterBar /></Col>
           </Row>
