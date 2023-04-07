@@ -1,9 +1,11 @@
 import React, { useEffect } from 'react'
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import Container from 'react-bootstrap/Container'
 import { LinkContainer } from 'react-router-bootstrap';
 import { useState } from 'react'
 import PostCard from './PostCard';
+
 
 export type Post = {
     id: number;
@@ -29,6 +31,7 @@ const CardGrid: React.FC = () => {
     },[])
     
     return (
+      <Container className='grid-bg'>
         <Row xs={1} md={2} lg={3} className="g-4">
           {posts.map((post, index) => (
             <Col key={post.id}>
@@ -36,6 +39,8 @@ const CardGrid: React.FC = () => {
             </Col>
           ))}
         </Row>
+      </Container>
+        
       )
   }
 
