@@ -6,18 +6,17 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { Container } from 'react-bootstrap'
 import LoginForm from './components/LoginForm'
 import Header from './components/Header/Header'
-import CardGrid from './components/CardGrid/CardGrid'
+import Home from './components/Home/Home'
 
 
 function App() {
   return (
-    <Container fluid>
+    <Container fluid >
       <Router>
         <Header />
         <Routes>
           <Route path="/login" element={<LoginForm />} />
-          {/* replace card grid with home page when we have it */}
-          <Route path="/" element={<CardGrid />} />
+          <Route path="/" element={<Home />} />
         </Routes>
         <Footer />
       </Router>

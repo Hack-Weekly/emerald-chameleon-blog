@@ -26,7 +26,7 @@ const Header = () => {
                   height="40"
                   className="d-inline-block align-top me-3"
                 />
-                <span className='d-none d-md-inline-block text-primary font-weight-bolder mb-0 gradient-text large-text font-weight-bold'>Emerald Blog</span>
+                <span className='d-none d-md-inline-block text-primary font-weight-bolder mb-0 gradient-text fs-1 font-weight-bold'>Emerald Blog</span>
              </Navbar.Brand>
            </Col>
            <Col className='d-flex justify-content-end ms-auto'>

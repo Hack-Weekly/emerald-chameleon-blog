@@ -31,8 +31,8 @@ const CardGrid: React.FC = () => {
     },[])
     
     return (
-      <Container className='grid-bg'>
-        <Row xs={1} md={2} lg={3} className="g-4">
+      <Container className=''>
+        <Row xs={1} md={2} lg={3} className="g-4 my-0">
           {posts.map((post, index) => (
             <Col key={post.id}>
               <PostCard post={post} bgColor={bgColors[index % bgColors.length]}/>
