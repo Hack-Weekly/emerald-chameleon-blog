@@ -10,23 +10,23 @@ const FilterBar = (props: Props) => {
     }
 
   return (
-    <div className='mt-4 p-4 d-flex align-center'>
-        <span className="fs-5 me-4">Filter by: </span>
+    <div className='mt-4 p-4'>
+        <span className="fs-6 d-block mb-2">Filter by: </span>
         <button 
             type="button" 
-            className="btn me-3 py-0 px-3 border-0 btn-secondary text-light rounded"
+            className="btn me-2 py-1 px-3 border-0 btn-secondary text-light rounded d-inline-block"
             onClick={handleClick}
         >Tags
         </button>
         <button 
             type="button" 
-            className="btn me-3 py-0 px-3 border-0 btn-secondary text-light rounded"
+            className="btn me-2 py-1 px-3 border-0 btn-secondary text-light rounded d-inline-block"
             onClick={handleClick}
         >Author
         </button>
         <button 
             type="button" 
-            className="btn me-3 py-0 px-3 border-0 btn-secondary text-light rounded"
+            className="btn me-2 py-1 px-3 border-0 btn-secondary text-light rounded d-inline-block"
             onClick={handleClick}
         >Date
         </button>
