@@ -1,7 +1,6 @@
 import React from 'react'
 import Sidebar from '../Sidebar/Sidebar'
 import CardGrid from '../CardGrid/CardGrid'
-import './home.scss'
 import { Container, Row, Col} from 'react-bootstrap'
 import FilterBar from '../FilterBar'
 
