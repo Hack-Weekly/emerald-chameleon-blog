@@ -18,6 +18,6 @@ using System.Threading.Tasks;
 
 namespace ApiServer.Domain.Tests.BlogPost
 {
-    public class CreateBlogPostCommandHandlerTests
+    public class CreateBlogPostCommandHandlerTests { 
     }
 }

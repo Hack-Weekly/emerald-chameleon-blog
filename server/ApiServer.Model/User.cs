@@ -33,8 +33,8 @@ namespace ApiServer.Model
         public RoleLevels UserRole { get; set; } = RoleLevels.Reader;
 
 
-        public ICollection<BlogPost> BlogPosts { get; set; }
-        public ICollection<BlogPostComment> BlogPostsComments { get; set;}
-        public ICollection<BlogPostLike> BlogPostLikes { get; set; }
+        public virtual ICollection<BlogPost> BlogPosts { get; set; }
+        public virtual ICollection<BlogPostComment> BlogPostsComments { get; set;}
+        public virtual ICollection<BlogPostLike> BlogPostLikes { get; set; }
     }
 }

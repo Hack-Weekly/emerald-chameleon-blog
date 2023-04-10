@@ -9,8 +9,8 @@ namespace ApiServer.DTO.BlogPostComments
 {
     public class CreateBlogPostCommentDTO : IDTO
     {
-        public BlogPost BlogPost { get; set; }
-        public User User { get; set; }
+        public Guid UserId { get; set; }
+        public Guid BlogPostId { get; set; }
         public string CommentContent { get; set; }
         public DateTime? CreatedDate { get; set; }
         public string? CreatedBy { get; set; }

@@ -4,6 +4,7 @@ using ApiServer.SharedInterfaces;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using ApiServer.Data.RepositoryInterfaces;
+using System.Text.Json.Serialization;
 
 var config = new ConfigurationBuilder()
     .AddJsonFile("appsettings.json")
@@ -21,13 +22,20 @@ Log.Logger = new LoggerConfiguration()
     var builder = WebApplication.CreateBuilder(args);
 
     builder.Host.UseSerilog();
+builder.Services.AddControllers()
+//builder.Services.AddControllersWithViews()
+    .AddNewtonsoftJson(options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
+//    .AddJsonOptions(options =>
+//{
+//    options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+//    options.JsonSerializerOptions.MaxDepth = 1;
+//});
 
-    builder.Services.AddAutoMapper(x =>
+builder.Services.AddAutoMapper(x =>
     {
         x.IncludeSourceExtensionMethods(typeof(IEntity));
     }, AppDomain.CurrentDomain.GetAssemblies());
 
-    builder.Services.AddControllers();
     // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
     builder.Services.AddEndpointsApiExplorer();
     //builder.Services.AddSwaggerGen();
