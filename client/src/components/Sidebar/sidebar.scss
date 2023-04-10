@@ -1,0 +1,5 @@
+@use '../../scss/variables.scss' as v;
+
+.bg-light {
+    background-color: v.$neutral-50;
+}
