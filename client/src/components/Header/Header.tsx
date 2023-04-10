@@ -2,7 +2,7 @@
 import chameleonIcon from '/chameleon.svg'
 import searchIcon from '/search.svg'
 import personIcon from '/person-circle.svg'
-import './header.scss'
+
 import '../../scss/_globals.scss'
 import { Navbar, Container, Nav, Col, NavDropdown, Form, Button } from 'react-bootstrap'
 
@@ -14,10 +14,10 @@ const Header = () => {
   }
   
   return (
-      <Container className='shadow' >
-        <Navbar sticky='top' >
+      // <Container className='shadow' >
+        <Navbar sticky='top' className='shadow bg-body p-3'>
           <Container fluid>
-            <Col>
+            <Col sm={2}>
               <Navbar.Brand href="/" className='d-flex align-items-center ms-auto'>
                 <img
                   alt=""
@@ -26,7 +26,7 @@ const Header = () => {
                   height="40"
                   className="d-inline-block align-top me-3"
                 />
-                <span className='d-none d-md-inline-block text-primary font-weight-bolder mb-0 gradient-text large-text font-weight-bold'>Emerald Blog</span>
+                <span className='d-none d-md-inline-block text-primary font-weight-bolder mb-0 gradient-text fs-1 font-weight-bold'>Emerald Blog</span>
              </Navbar.Brand>
            </Col>
            <Col className='d-flex justify-content-end ms-auto'>
@@ -55,7 +55,7 @@ const Header = () => {
           </Col>
         </Container>
       </Navbar>
-     </Container>
+    //  </Container>
   )
 }
 

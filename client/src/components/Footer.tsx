@@ -4,7 +4,7 @@ import '../scss/_globals.scss'
 
 export function Footer() {
     return (
-        <Navbar style={{ height: "calc(100vh - 80px)"}}>
+        <Navbar>
             <Container className='d-flex flex-column'>
                 <Navbar.Brand>
                     <img 

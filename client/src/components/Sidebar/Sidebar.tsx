@@ -25,7 +25,7 @@ const Sidebar = (props: Props) => {
 
 
   return (
-    <Container style={{ width: '15rem' }} className='bg-light p-4 rounded'>
+    <div style={{ width: '15rem' }} className='bg-body p-4 rounded mt-4 w-100 mx-auto'>
 
       {/* if on home page, should show list of tags and hot posts */}
       {isHomePage && <SidebarTagsSection />}
@@ -36,7 +36,7 @@ const Sidebar = (props: Props) => {
       {/* show hot posts on both home page and single post page */}
       <SidebarHotPosts />
 
-    </Container>
+    </div>
      
         
   )
