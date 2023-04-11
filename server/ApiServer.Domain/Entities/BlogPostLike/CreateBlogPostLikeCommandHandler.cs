@@ -3,28 +3,28 @@ using MediatR;
 using Microsoft.Extensions.Logging;
 
 
-namespace ApiServer.Domain.Entities.BlogPostComment
+namespace ApiServer.Domain.Entities.BlogPostLike
 {
-    public class CreateBlogPostCommentCommandHandler : IRequestHandler<CreateBlogPostCommentCommand, Guid>
+    public class CreateBlogPostLikeCommandHandler : IRequestHandler<CreateBlogPostLikeCommand, Guid>
     {
-        private readonly ILogger<CreateBlogPostCommentCommandHandler> _logger;
-        private readonly IBlogPostCommentRepository _blogPostCommentRepository;
+        private readonly ILogger<CreateBlogPostLikeCommandHandler> _logger;
+        private readonly IBlogPostLikeRepository _blogPostLikeRepository;
         private readonly IUserRepository _userRepository;
         private readonly IBlogPostRepository _blogPostRepository;
 
-        public CreateBlogPostCommentCommandHandler(
-            ILogger<CreateBlogPostCommentCommandHandler> logger,
-            IBlogPostCommentRepository blogPostCommentRepository,
+        public CreateBlogPostLikeCommandHandler(
+            ILogger<CreateBlogPostLikeCommandHandler> logger,
+            IBlogPostLikeRepository blogPostLikeRepository,
             IUserRepository userRepository,
             IBlogPostRepository blogPostRepository)
         {
             _logger = logger;
-            _blogPostCommentRepository = blogPostCommentRepository;
+            _blogPostLikeRepository = blogPostLikeRepository;
             _userRepository = userRepository;
             _blogPostRepository = blogPostRepository;
         }
 
-        public async Task<Guid> Handle(CreateBlogPostCommentCommand request, CancellationToken token)
+        public async Task<Guid> Handle(CreateBlogPostLikeCommand request, CancellationToken token)
         {
             var author = _userRepository.Get().Where(x => x.Id == request.Model.UserId).FirstOrDefault();
             if (author is null)
@@ -40,7 +40,7 @@ namespace ApiServer.Domain.Entities.BlogPostComment
 
             request.Model.User = author;
             request.Model.BlogPost = blogPost;
-            var response = await _blogPostCommentRepository.CreateAsync(request.Model, token);
+            var response = await _blogPostLikeRepository.CreateAsync(request.Model, token);
             return response.Id;
         }
     }

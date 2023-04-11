@@ -10,5 +10,6 @@ namespace ApiServer.Data.RepositoryInterfaces
 {
     public interface IBlogPostCommentRepository : IRepository<BlogPostComment>
     {
+
     }
 }
