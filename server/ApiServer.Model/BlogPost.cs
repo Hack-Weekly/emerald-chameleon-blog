@@ -6,7 +6,7 @@
         public string Title { get; set; }
         public string ImageLocation { get; set; }
         public Guid AuthorId { get; set; } = Guid.Empty;
-        public User Author { get; set; }
+        public virtual User Author { get; set; }
         public string PostContent { get; set; }
         //Tags?
         public DateTime? CreatedDate { get; set; }
@@ -15,7 +15,7 @@
         public string? UpdatedBy { get; set; }
         public int Version { get; set; } = 1;
 
-        ICollection<BlogPostComment> BlogPostComments { get; set; }
-        ICollection<BlogPostLike> BlogPostLikes { get; set;}
+        public virtual ICollection<BlogPostComment> BlogPostComments { get; set; }
+        public virtual ICollection<BlogPostLike> BlogPostLikes { get; set;}
     }
 }

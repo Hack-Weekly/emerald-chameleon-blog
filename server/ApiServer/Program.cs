@@ -4,6 +4,7 @@ using ApiServer.SharedInterfaces;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using ApiServer.Data.RepositoryInterfaces;
+using System.Text.Json.Serialization;
 
 var config = new ConfigurationBuilder()
     .AddJsonFile("appsettings.json")
@@ -15,22 +16,21 @@ Log.Logger = new LoggerConfiguration()
     .WriteTo.File("/logs/output.txt", rollingInterval: RollingInterval.Day)
     .CreateLogger();
 
-//try
-//{
     Log.Logger.Information("Server is starting");
     var builder = WebApplication.CreateBuilder(args);
 
     builder.Host.UseSerilog();
+builder.Services.AddControllers()
+    .AddNewtonsoftJson(options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
 
-    builder.Services.AddAutoMapper(x =>
+
+builder.Services.AddAutoMapper(x =>
     {
         x.IncludeSourceExtensionMethods(typeof(IEntity));
     }, AppDomain.CurrentDomain.GetAssemblies());
 
-    builder.Services.AddControllers();
     // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
     builder.Services.AddEndpointsApiExplorer();
-    //builder.Services.AddSwaggerGen();
     builder.Services.AddSwaggerGen(c =>
     {
         c.SwaggerDoc("v1", new OpenApiInfo { Title = "ProjectBackEnd.Api", Version = "v1" });
@@ -58,7 +58,6 @@ Log.Logger = new LoggerConfiguration()
     });
 
     builder.Services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-    //ilder.Services.AddProjectServicesCollections(builder.Configuration);
 
     builder.Services.AddDbContext<MainDbContext>(
         dbContextOptions => dbContextOptions.UseSqlite(builder.Configuration["ConnectionStrings:SQLLite"],
@@ -67,7 +66,6 @@ Log.Logger = new LoggerConfiguration()
 
     builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
     {
-        //options.RequireHttpsMetadata = false;
         options.SaveToken = false;
         options.TokenValidationParameters = new TokenValidationParameters()
         {
@@ -125,13 +123,3 @@ builder.Services.AddCors();
     });
 
     app.Run();
-//} 
-//catch (Exception ex) 
-//{
-//    Log.Fatal(ex, "Application failed to start.");
-//    Console.WriteLine(ex.Message);
-//} 
-//finally
-//{
-//    Log.CloseAndFlush();
-//}

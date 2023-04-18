@@ -14,5 +14,10 @@ namespace ApiServer.Data.EF.EntityRepositories
         {
             _context = context ?? throw new ArgumentNullException(nameof(context));
         }
+
+        public async Task<int> GetCountByBlogPostId(Guid id)
+        {
+            return await _context.BlogPostLike.CountAsync(x  => x.BlogPostId == id);
+        }
     }
 }
