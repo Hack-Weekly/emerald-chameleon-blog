@@ -1,18 +1,19 @@
-import Card from 'react-bootstrap/Card';
-import { Post } from './CardGrid';
+import Card from 'react-bootstrap/Card'
+import { Post } from './CardGrid'
+import LikeButton from '../LikeBtn'
 import './cardGrid.scss'
 import '../../scss/styles.scss'
-import { LinkContainer } from 'react-router-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap'
 import { Link } from 'react-router-dom'
 
 type PostCardProps = {
-  post: Post;
-  bgColor: string;
+  post: Post
+  bgColor: string
 }
 
-const PostCard= (props: PostCardProps) => {
-
+const PostCard = (props: PostCardProps) => {
   const cardBody = `${props.post.body.slice(0, 80)}...`
+
   const cardTitle =`${props.post.title.slice(0, 30)}`
  
   return (
@@ -28,7 +29,7 @@ const PostCard= (props: PostCardProps) => {
         </Card.Body>
       </Card>
     </Link>
-  ) 
+  )
 }
 
 export default PostCard
